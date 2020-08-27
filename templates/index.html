@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTL | Covid 19 | Tracker App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./CSS/style.css"> -->
+    <link rel="stylesheet" href="../static/CSS/style.css">
+</head>
+
+<body>
+        <h3> <img src="../static/img/covid.png" alt="">CV-19 Updates</h3>
+    <div class="container">
+        <div class="cases">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="box">
+                        Total Cases
+                        <img class="arrow" src="../static/img/down2.png" alt="">
+                        <p class="figures">11,000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="box">
+                        Recoveries
+                        <img class="arrow" src="../static/img/top.png" alt="">
+                        <p class="figures">4,135</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cases">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="box">
+                            Active Cases
+                            <img class="arrow" src="../static/img/down2.png" alt="">
+                            <p class="figures">6,372</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="box">
+                            Total Deaths
+                            <img class="arrow" src="../static/img/down2.png" alt="">
+                            <p class="figures">32</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mine">
+
+                <table>
+                    <tr>
+                        <th>Countries</th>
+                        <th>Active Cases</th>
+                        <th>Recovered</th>
+                        <th>Total Deaths</th>
+                        <th>Total Cases</th>
+                    </tr>
+                    <!-- <tr>
+                        <td>Ghana</td>
+                        <td>34,353</td>
+                        <td>23,455</td>
+                        <td>345</td>
+                        <td>213</td>
+                    </tr>
+                    <tr>
+                        <td>Italy</td>
+                        <td>34,353</td>
+                        <td>23,455</td>
+                        <td>345</td>
+                        <td>213</td>
+                    </tr>
+                    <tr>
+                        <td>South Africa</td>
+                        <td>34,353</td>
+                        <td>23,455</td>
+                        <td>345</td>
+                        <td>213</td>
+                    </tr>
+                    <tr>
+                        <td>U.S.A.</td>
+                        <td>34,353</td>
+                        <td>23,455</td>
+                        <td>345</td>
+                        <td>213</td>
+                    </tr>
+                    <tr>
+                        <td>Spain</td>
+                        <td>34,353</td>
+                        <td>23,455</td>
+                        <td>345</td>
+                        <td>213</td>
+                    </tr> -->
+
+                    {% for report in allcountryreport %}
+                    <tr>
+                        <td>{{report.name}}</td>
+                            <td>{{report.activecase}}</td>
+                            <td>{{report.recoveries}}</td>
+                            <td>{{report.total_deaths}}</td>
+                            <td>{{report.total_cases}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+
+            </div>
+
+            <div class="mine">
+                <div class="rbar">
+                    <div class="box">
+                        <h4>Health Tips</h4>
+                        <p class="tips">Cover your mouth when sneezing</p>
+                        <p>Wash your hands regularly</p>
+                        <hr>
+                        <p>Avoid group gathering</p>
+
+
+                    </div>
+                </div>
+
+                <div class="rbar">
+
+                    <div class="box">
+                        <h4>News & Updates</h4>
+                        <img class="news" src="../static/img/gathering.jpg" alt="">
+
+
+                    </div>
+
+                </div>
+
+
+</body>
+
+</html>
